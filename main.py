@@ -2,11 +2,11 @@ import cv2, random
 
 # // Set contant values
 RGB_COLORS = [(0, 0, 255), (255, 0, 0), (0, 255, 0)]
-IMAGE = cv2.imread('people.jpg')
+IMAGE = cv2.imread('files/people.jpg')
 
 # Return cascaded image function
 def image_casc():
-    return cv2.CascadeClassifier("haarcascade.xml").detectMultiScale(
+    return cv2.CascadeClassifier("files/haarcascade.xml").detectMultiScale(
         cv2.cvtColor(IMAGE, cv2.COLOR_BGR2GRAY), 1.1, 4
     )
 
